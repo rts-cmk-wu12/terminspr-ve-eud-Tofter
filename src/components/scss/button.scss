@@ -1,0 +1,13 @@
+@use '../../variables';
+
+
+.button{
+    width: 249px;
+    height: 54px;
+    background-color: variables.$background-button-color;
+    color: variables.$light-text-color;
+    border-radius: 9px;
+    border: none;
+    font-family: "ubuntu", "sans-serif";
+    font-size: 18px;
+}

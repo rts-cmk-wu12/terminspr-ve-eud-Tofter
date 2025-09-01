@@ -1,0 +1,27 @@
+@use '../../variables';
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+        text-transform: uppercase;
+
+        &__first {
+            font-size: 36px;
+            font-family: "roboto", "sans-serif";
+            color: variables.$first-title-color;
+        }
+
+        &__second {
+            font-size: 72px;
+            font-family: "racing-sans-one", "sans-serif";
+            color: variables.$second-title-color;
+        }
+    }
+
+    .button {
+        
+    }
+}

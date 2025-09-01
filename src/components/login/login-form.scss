@@ -1,0 +1,50 @@
+@use '../../variables';
+
+.background {
+    display: flex;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        background-image: url('../../../public/images/overlay.png');
+        width: 100%;
+        background-repeat: no-repeat;
+        text-align: left;
+        
+
+        h2 {
+            color: variables.$light-text-color;
+            margin-left: 2.35rem;
+            font-size: 48px;
+            /* Not working?????
+            
+            font-family: "ubuntu", "sans-serif"; */
+        }
+
+        .button {
+            margin: 0 auto;
+        }
+
+        .form {
+
+            &__input-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+                
+            }
+
+            input {
+                width: 332px;
+                height: 50px;
+                padding: 0 1rem;
+                border: none;
+            }
+        }
+    }
+
+}
