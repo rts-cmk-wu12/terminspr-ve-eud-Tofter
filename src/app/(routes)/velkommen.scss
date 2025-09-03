@@ -10,18 +10,26 @@
 
         &__first {
             font-size: 36px;
-            font-family: "roboto", "sans-serif";
-            color: variables.$first-title-color;
+            font-family: Roboto, sans-serif;
+            -webkit-text-stroke: 2px variables.$first-title-color;
+            color: transparent;
+            
         }
 
         &__second {
             font-size: 72px;
-            font-family: "racing-sans-one", "sans-serif";
+            font-family: Racing-Sans-One, sans-serif;
             color: variables.$second-title-color;
         }
     }
 
     .button {
         
+    }
+
+    &__block{
+        height: 20px;
+        width: 242px;
+        background-color: variables.$block-color;
     }
 }

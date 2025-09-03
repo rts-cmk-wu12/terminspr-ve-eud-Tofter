@@ -1,17 +1,21 @@
 import AktivitetCard from '@/components/aktivitet-card/aktivitet-card';
 import './aktiviteter.scss';
+import { CiSearch } from "react-icons/ci";
 
-export default async function Aktiviteter() {
+export default async function Aktiviteter({params}) {
+
+    const {slug} = await params 
 
     const response = await fetch('http://localhost:4000/api/v1/activities')
     const json = await response.json()
-    console.log(json);
-    
-
 
     return (
         <div className='wrapper'>
         <h2>Aktiviteter</h2>
+            <div className="search">
+                        <input type="search" name="search"/>
+                        <CiSearch size={30} />
+                    </div>
         <ul className='card'>
            {json.map(aktivitet => (
             <li className='card__item' key={aktivitet.id}>
