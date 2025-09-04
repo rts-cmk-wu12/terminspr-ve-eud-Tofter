@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import '../../components/scss/background.scss';
 import '../../components/scss/button.scss';
 import './velkommen.scss';
@@ -11,7 +12,7 @@ export default function Velkommen() {
           <p className='title__second'>dans</p>
         </div>
         <div className='background__block'></div>
-        <button className='button'>Kom i gang</button>
+        <Link href='/aktiviteter' className='button-link'>Kom i gang</Link>
       </div>
     </>
   );

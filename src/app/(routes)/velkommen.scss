@@ -13,7 +13,7 @@
             font-family: Roboto, sans-serif;
             -webkit-text-stroke: 2px variables.$first-title-color;
             color: transparent;
-            
+
         }
 
         &__second {
@@ -23,13 +23,27 @@
         }
     }
 
-    .button {
-        
-    }
 
-    &__block{
+    &__block {
         height: 20px;
         width: 242px;
         background-color: variables.$block-color;
+    }
+
+}
+
+.button-link {
+    animation: animate 1.5s;
+}
+
+@keyframes animate {
+    from {
+
+        opacity: 0;
+    }
+
+    to {
+
+        opacity: 1;
     }
 }

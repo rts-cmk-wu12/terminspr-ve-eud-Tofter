@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import './aktivitet-card.scss';
 
-export default function AktivitetCard({ aktivitet }) {
+export default async function AktivitetCard({ aktivitet }) {
 
     return (
-        <Link className="aktivitet" href=''>
+        <Link className="aktivitet" href={`/aktiviteter/${aktivitet.id}`}>
                 <div className="aktivitet__box">
                     <h3 className="aktivitet__box-title">{aktivitet.name}</h3>
                     <div className="aktivitet__box__container">

@@ -2,8 +2,8 @@ import "./globals.css";
 
 export const metadata = {
   title:{ 
-   template: "Landrup",
-   default: '%s | Landrup'
+   template: "%s | Landrup",
+   default: 'Landrup'
  },
   description: "Landrup danseskole",
 }

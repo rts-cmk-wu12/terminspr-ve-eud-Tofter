@@ -1,0 +1,22 @@
+@use '../../variables';
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 66px;
+    background-color: variables.$background-box-color;
+
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        padding-top: .75rem;
+
+        svg{
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+    }
+
+}

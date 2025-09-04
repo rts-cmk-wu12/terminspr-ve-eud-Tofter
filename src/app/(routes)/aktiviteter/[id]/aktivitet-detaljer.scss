@@ -1,0 +1,46 @@
+@use '../../../../variables';
+
+body{
+    background-color: variables.$background-body-color;
+}
+
+.image-container{
+    display: grid;
+    width: 411px;
+
+    .button{
+        position: absolute;
+        z-index: 1;
+        top: 411;
+        right: 30;
+    }
+    
+    &__image{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.details-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+    text-align: left;
+    color: variables.$light-text-color;
+
+    &__heading-container{
+
+        &__heading{
+            font-size: 24px;
+        }
+
+        &__text{
+            font-size: 18px;
+        }
+    }
+
+    &__description{
+        font-size: 18px;
+    }
+}
