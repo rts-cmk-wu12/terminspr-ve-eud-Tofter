@@ -8,8 +8,12 @@ Rasmus Toft, WU12
 
 `npm run dev`
 
-https://minadresse.dk/iplaymusic
-Jeg har valgt valgfri opgave A
+`npm start ( på API )`
+
+Jeg har valgt opgave ****
+
+Jeg har valg at fjerne søge siden og smide søgefeltet over på Aktivitet siden pga. siderne indeholder de samme elementer og giver kun forvirring til brugere.
+Jeg har dermed også valgt at lave en USER til navigationen til login siden.
 
 ## Tech-stack
 * **Next.js**  
@@ -28,9 +32,38 @@ Et interface til at få adgang til Spotify's data, så jeg kan lave min egen app
 Et valideringsbibliotek til objekter og strings. Jeg bruger Zod til blandt andet at validere bruger-input fra formularer.
 
 ## Kode-eksempel
-Kode-eksempel path:
+Kode-eksempel path: src/components/login/login-form.jsx
 ```jsx
-********
-```
+export default function LoginForm() {
 
-Jeg starter med at kalde en React hook "useState" som er en funktion, der returnerer et array. Arrayet indeholder 2 elementer: Et state og en sætter-funktion til dette state. useState tager imod et argument "initialState" som er værdien for statet ved start.
+    const [formState, formAction, isPending] = useActionState(DoTheLoginThing)
+
+    useEffect(function () {
+        if (!formState) return;
+    }, [formState]);
+
+    return isPending ? <p>loading...</p> : (
+        <>
+            <div className='background'>
+                <div className='container'>
+                    <h2>Log ind</h2>
+                    <form action={formAction} className='form'>
+                        <div className='form__input-container'>
+                            <input placeholder="brugernavn" type="text" name="username" />
+                            <span>{formState?.properties?.username.errors}</span>
+
+                            <input placeholder="adgangskode" type="password" name="password" />
+                            <span>{formState?.properties?.password.errors}</span>
+
+                        </div>
+                        <div className='button-container'>
+                            <button type="submit" className="button">Log ind</button>
+                            <span>{formState?.errors}</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </>
+    )
+}
+```

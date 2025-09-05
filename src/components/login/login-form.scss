@@ -21,6 +21,14 @@
             font-family: Ubuntu, sans-serif;
         }
 
+        .button-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
         .button {
             margin: 0 auto;
             font-family: Ubuntu, sans-serif;

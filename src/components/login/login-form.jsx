@@ -1,11 +1,10 @@
 "use client";
 
-import DoTheLoginThing from "@/actions/do-the-login-thing";
-import { useActionState, useEffect } from "react";
-
 import '../scss/button.scss'
 import '../scss/background.scss'
 import './login-form.scss'
+import { useActionState, useEffect } from 'react';
+import DoTheLoginThing from '@/actions/do-the-login-thing';
 
 export default function LoginForm() {
 
@@ -16,7 +15,6 @@ export default function LoginForm() {
         console.log(formState);
     }, [formState]);
 
-
     return isPending ? <p>loading...</p> : (
         <>
             <div className='background'>
@@ -26,13 +24,17 @@ export default function LoginForm() {
                         <div className='form__input-container'>
                             <input placeholder="brugernavn" type="text" name="username" />
                             <span>{formState?.properties?.username.errors}</span>
-                            
+
                             <input placeholder="adgangskode" type="password" name="password" />
                             <span>{formState?.properties?.password.errors}</span>
+
                         </div>
+                        <div className='button-container'>
+                            <button type="submit" className="button">Log ind</button>
+                            <span>{formState?.errors}</span>
+                        </div>
+
                     </form>
-                    <button type="submit" className="button">Log ind</button>
-                    <span>{formState?.errors}</span>
                 </div>
             </div>
         </>

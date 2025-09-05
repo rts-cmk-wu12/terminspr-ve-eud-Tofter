@@ -1,5 +1,5 @@
 import { AiOutlineHome } from "react-icons/ai";
-import { CiCalendar } from "react-icons/ci";
+import { CiCalendar, CiUser } from "react-icons/ci";
 import './footer.scss'
 import Link from "next/link";
 
@@ -13,6 +13,7 @@ export default function Footer() {
                 <Link className="footer__container__calendar" href='/kalender-default'>
                     <CiCalendar size={35} />
                 </Link>
+                <Link className="footer__container__login" href='/log-in'><CiUser size={35} /></Link>
             </div>
         </footer>
     )
